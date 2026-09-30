@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="跨專案 PR 開發與交付工作流"><title>跨專案 PR 開發與交付工作流 · Public Knowledge Wiki</title><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="header-inner"><a class="brand" href="../index.html">Public Knowledge Wiki<small>可公開、可追溯、可重用的工作知識</small></a><nav><a href="../index.html#workflows">工作流</a><a href="../index.html#projects">專案</a><a href="../README.md">About</a></nav></div></header><main class="container"><article class="article">
+<p class="muted">工具與工作流 · 2026-09-30</p><h1>跨專案 PR 開發與交付工作流</h1>
+<p>所有 Git 專案都採用同一套預設交付路徑：<strong>同步 Base → 建獨立 Branch → 實作 → 驗證 → Commit → Push Branch → PR → CI / Diff / 風險審查 → Squash Merge → Readback / Deploy</strong>。</p>
+<div class="callout"><strong>目的不是讓 Git 變複雜。</strong>而是讓每一項變更都有清楚邊界、驗證證據、合併紀錄與回檔入口，尤其適合多功能或多 Agent 同時開發。</div>
+<h2>一個工作單元一個 Branch</h2>
+<table><tr><th>類型</th><th>命名</th><th>用途</th></tr><tr><td>Feature</td><td><code>feat/*</code></td><td>新功能</td></tr><tr><td>Fix</td><td><code>fix/*</code></td><td>Bug 修復</td></tr><tr><td>Docs</td><td><code>docs/*</code></td><td>文件與 Wiki</td></tr><tr><td>Hotfix</td><td><code>hotfix/*</code></td><td>緊急修復，仍走 PR</td></tr><tr><td>Revert</td><td><code>revert/*</code></td><td>撤銷已合併變更</td></tr></table>
+<h2>PR 是正式整合入口</h2><p>PR 至少記錄目的、變更範圍、驗證結果、風險、相依項、部署方式與回檔策略。Push Branch 不等於交付；CI 綠燈也不等於已 Merge 或 Production 已發布。</p>
+<h2>多功能／多 Agent 並行</h2><ol><li>A、B、C 各自建立 Branch 與 PR。</li><li>若 B 依賴 A，在 PR 明確標記相依，不偷複製 A 的未合併程式。</li><li>A Merge 後，B/C 更新最新 Base、解衝突、重跑必要驗證。</li><li>衝突在 Branch 解決，不用 force push 或 reset 整合分支。</li><li>Agent 間用 Issue、PR 與 authoritative repo 文件交接，不讓人充當人工剪貼板。</li></ol>
+<h2>回檔</h2><p>一般程式與文件使用 <code>revert/*</code> Branch 對 Merge Commit 做 Revert，再開 Revert PR。資料庫與外部服務則需要額外的備份、向前修復或資料復原方案；Git Revert 不會自動復原 Production 資料。</p>
+<h2>固定交付紀錄</h2><pre><code>Repo | Base | Branch | PR URL/# | Head SHA
+CI/Validation | Merge SHA / pending
+Deploy/readback | Revert plan</code></pre>
+<p>技術強制層請搭配 <a href="github-ruleset.html">GitHub Ruleset 與 PR 合併閘門</a>。</p></article></main><footer class="footer">Curated public mirror · 僅公開經整理與去識別化的知識。</footer></body></html>
