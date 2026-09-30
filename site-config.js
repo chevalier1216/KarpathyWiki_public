@@ -12,8 +12,8 @@ window.PUBLIC_WIKI_CONFIG = {
     about: "About"
   },
   hero: {
-    title: "把工作過程整理成<br>下一次可以直接重用的知識。",
-    description: "這是從私人工作知識庫篩選出的公開閱讀版，保留已驗證的方法、工程決策、踩坑與解法；私人原始資料、帳號資訊與本機細節不會同步到這裡。"
+    title: "Obsidian wiki 現況說明",
+    description: "以HTML格式展示當前以Obsidian結合Codex製作之wiki\n\n篩選出的公開資訊閱讀版，僅保留已驗證方法，重大異常紀錄與修正解法\n\n原始資料、帳號資訊與本機細節已篩選屏蔽"
   },
   sections: {
     workflows: "工作流與工具",
@@ -21,19 +21,19 @@ window.PUBLIC_WIKI_CONFIG = {
   },
   cards: {
     crossProject: "跨專案 PR 開發與交付工作流",
-    ruleset: "GitHub Ruleset 與 PR 合併閘門",
+    ruleset: "GitHub Ruleset with PR merge rules",
     obsidian: "Obsidian 與 Wiki Sync 架構",
     skills: "AI Skills 使用地圖",
-    workstation: "PersonalWorkStation 工程治理",
-    mahjong: "單機麻將：存檔與發布驗證"
+    workstation: "PersonalWorkStation",
+    mahjong: "單機麻將簡易實作"
   },
   articles: {
     crossProject: "跨專案 PR 開發與交付工作流",
-    ruleset: "GitHub Ruleset 與 PR 合併閘門",
+    ruleset: "GitHub Ruleset with PR merge rules",
     obsidian: "Obsidian 與 Wiki Sync 架構",
     skills: "AI Skills 使用地圖",
-    workstation: "PersonalWorkStation：從功能實作到可驗證交付",
-    mahjong: "單機麻將：本機存檔與發布驗證"
+    workstation: "PersonalWorkStation",
+    mahjong: "單機麻將簡易實作"
   },
   footer: "Curated public mirror · 僅公開經整理與去識別化的知識。"
 };
