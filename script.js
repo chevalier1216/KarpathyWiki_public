@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const q=document.querySelector("#site-search");if(!q)return;const cards=[...document.querySelectorAll("[data-search]")];q.addEventListener("input",()=>{const term=q.value.trim().toLowerCase();for(const card of cards){card.style.display=!term||card.dataset.search.toLowerCase().includes(term)?"block":"none";}});});
