@@ -1,5 +1,5 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="跨專案 PR 開發與交付工作流"><title>跨專案 PR 開發與交付工作流 · Public Knowledge Wiki</title><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="header-inner"><a class="brand" href="../index.html">Public Knowledge Wiki<small>可公開、可追溯、可重用的工作知識</small></a><nav><a href="../index.html#workflows">工作流</a><a href="../index.html#projects">專案</a><a href="../README.md">About</a></nav></div></header><main class="container"><article class="article">
-<p class="muted">工具與工作流 · 2026-09-30</p><h1>跨專案 PR 開發與交付工作流</h1>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="跨專案 PR 開發與交付工作流"><title>跨專案 PR 開發與交付工作流 · Public Knowledge Wiki</title><link rel="stylesheet" href="../styles.css"></head><body><header class="site-header"><div class="header-inner"><a class="brand" href="../index.html"><span data-config="site.title">Public Knowledge Wiki</span><small data-config="site.subtitle">可公開、可追溯、可重用的工作知識</small></a><nav><a href="../index.html#workflows" data-config="nav.workflows">工作流</a><a href="../index.html#projects" data-config="nav.projects">專案</a><a href="../README.md" data-config="nav.about">About</a></nav></div></header><main class="container"><article class="article">
+<p class="muted">工具與工作流 · 2026-09-30</p><h1 data-article-title="articles.crossProject">跨專案 PR 開發與交付工作流</h1>
 <p>所有 Git 專案都採用同一套預設交付路徑：<strong>同步 Base → 建獨立 Branch → 實作 → 驗證 → Commit → Push Branch → PR → CI / Diff / 風險審查 → Squash Merge → Readback / Deploy</strong>。</p>
 <div class="callout"><strong>目的不是讓 Git 變複雜。</strong>而是讓每一項變更都有清楚邊界、驗證證據、合併紀錄與回檔入口，尤其適合多功能或多 Agent 同時開發。</div>
 <h2>一個工作單元一個 Branch</h2>
@@ -10,4 +10,4 @@
 <h2>固定交付紀錄</h2><pre><code>Repo | Base | Branch | PR URL/# | Head SHA
 CI/Validation | Merge SHA / pending
 Deploy/readback | Revert plan</code></pre>
-<p>技術強制層請搭配 <a href="github-ruleset.html">GitHub Ruleset 與 PR 合併閘門</a>。</p></article></main><footer class="footer">Curated public mirror · 僅公開經整理與去識別化的知識。</footer></body></html>
+<p>技術強制層請搭配 <a href="github-ruleset.html">GitHub Ruleset 與 PR 合併閘門</a>。</p></article></main><footer class="footer" data-config="footer">Curated public mirror · 僅公開經整理與去識別化的知識。</footer><script src="../site-config.js"></script><script src="../script.js"></script></body></html>

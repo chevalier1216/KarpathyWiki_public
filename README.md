@@ -14,3 +14,18 @@
 - 公開版是 downstream mirror；完整私人知識庫仍是內部來源。
 
 網站入口：GitHub Pages 啟用後使用 `https://chevalier1216.github.io/KarpathyWiki_public/`。
+
+## 顯示設定
+
+- 網站預設使用低亮度暗色主題，主要樣式集中在 `styles.css`。
+- 網站名稱、導覽名稱、首頁主標題、分類標題、卡片名稱與文章主標題集中在 `site-config.js`。
+- 只要改 `site-config.js` 的文字即可重新命名，不需要逐頁修改 HTML，也不會改變文章 URL。
+
+例如：
+
+```js
+sections: {
+  workflows: "我的工作方法",
+  projects: "實作紀錄"
+}
+```
